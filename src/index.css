@@ -1,0 +1,304 @@
+body {
+    background-color: #22629e;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------------------ NAVBAR */
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 1);
+    width: 100%;
+    z-index: 99;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.logo-navbar {
+    height: 30px;
+    width: auto;
+    margin: 5px;
+    padding-left: 10px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.logo-navbar-2 {
+    height: 15px;
+    width: auto;
+    margin-top: 5px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.menu-nav {
+    display: none;
+}
+
+/* --------------------------------- MENU HAMBURGESA*/
+
+.burger-menu-icon {
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.mobile-nav-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 56%;
+    height: 100%;
+    background-color: white;
+    padding-top: 80px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 98;
+}
+
+.mobile-nav-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+}
+
+.mobile-nav-menu li {
+    text-align: end;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.close-menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.link-container:hover {
+    background: linear-gradient(95deg, rgba(255, 255, 255, 0), #9fc750 100%, #63802b);
+}
+
+/* --------- ESTILOS PARA LINKS*/
+
+.menu-nav li a,
+.burger-menu-nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-nav li a:hover {
+    color: #9fc750;
+}
+
+.menu-nav li a.active,
+.burger-menu-nav li a.active {
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------------------------------------ FOOTER */
+
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo-footer {
+    height: 15px;
+    user-select: none;
+    pointer-events: none;
+}
+
+@media (min-width: 576px) {
+    /* ------------------------------------------------------------------------------------ NAVBAR */
+    .logo-navbar {
+        height: 40px;
+        padding-left: 30px;
+    }
+
+    .logo-navbar-2 {
+        height: 20px;
+        margin-top: 7px;
+    }
+
+    /* --------------------------------- MENU HAMBURGESA*/
+
+    .burger-menu-icon {
+        top: 12px;
+        right: 40px;
+        font-size: 35px;
+    }
+
+    .mobile-nav-menu {
+        width: 40%;
+        font-size: 20px;
+    }
+
+    .mobile-nav-menu li {
+        padding-right: 40px;
+    }
+
+    /* ------------------------------------------------------------------------------------ FOOTER */
+
+    .logo-footer {
+        height: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* ------------------------------------------------------------------------------------ NAVBAR */
+
+    .logo-navbar {
+        height: 30px;
+        padding-left: 10px;
+    }
+
+    .logo-navbar-2 {
+        height: 15px;
+        margin-top: 7px;
+    }
+
+    .menu-nav {
+        display: flex;
+        list-style: none;
+        gap: 5px;
+        align-items: center;
+        margin: 0;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    /* ------------------------------------------------------------------------------------ FOOTER */
+
+    .logo-footer {
+        height: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* ------------------------------------------------------------------------------------ NAVBAR */
+
+    .logo-navbar {
+        height: 40px;
+        padding-left: 35px;
+    }
+
+    .logo-navbar-2 {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    .menu-nav {
+        gap: 10px;
+        padding-right: 35px;
+        font-size: 19px;
+    }
+
+    /* ------------------------------------------------------------------------------------ FOOTER */
+
+    .logo-footer {
+        height: 23px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* ------------------------------------------------------------------------------------ NAVBAR */
+
+    .logo-navbar {
+        height: 50px;
+        padding-left: 65px;
+    }
+
+    .logo-navbar-2 {
+        margin-top: 15px;
+    }
+
+    .menu-nav {
+        gap: 13px;
+        padding-right: 60px;
+        font-size: 22px;
+    }
+
+    /* ------------------------------------------------------------------------------------ FOOTER */
+
+    .logo-footer {
+        height: 26px;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* ------------------------------------------------------------------------------------ NAVBAR */
+
+    .logo-navbar {
+        height: 70px;
+        padding-left: 75px;
+    }
+
+    .logo-navbar-2 {
+        margin-top: 25px;
+    }
+
+    .menu-nav {
+        gap: 16px;
+        padding-right: 80px;
+        font-size: 24px;
+    }
+
+    /* ------------------------------------------------------------------------------------ FOOTER */
+
+    .logo-footer {
+        height: 30px;
+    }
+}
+
+@media (min-width: 1700px) {
+    /* ------------------------------------------------------------------------------------ NAVBAR */
+
+    .logo-navbar {
+        height: 80px;
+        padding-left: 130px;
+    }
+
+    .logo-navbar-2 {
+        margin-top: 35px;
+    }
+
+    .menu-nav {
+        gap: 19px;
+        padding-right: 150px;
+        font-size: 28px;
+    }
+
+    /* ------------------------------------------------------------------------------------ FOOTER */
+
+    .logo-footer {
+        height: 35px;
+    }
+}
