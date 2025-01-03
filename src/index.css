@@ -47,7 +47,7 @@ body {
 /* --------------------------------- MENU HAMBURGESA*/
 
 .burger-menu-icon {
-    position: fixed;
+    position: absolute;
     top: 8px;
     right: 20px;
     font-size: 32px;
@@ -130,6 +130,15 @@ body {
     height: 15px;
     user-select: none;
     pointer-events: none;
+}
+
+/* ------------------------------------------------------------------------------------ SECTION */
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
 }
 
 @media (min-width: 576px) {

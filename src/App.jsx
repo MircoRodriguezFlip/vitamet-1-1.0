@@ -6,7 +6,7 @@ import { ScrollToTop } from './hooks/ScrollTop';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/vitamet-1-1.0">
             <ScrollToTop />
 
             <NavBar />
