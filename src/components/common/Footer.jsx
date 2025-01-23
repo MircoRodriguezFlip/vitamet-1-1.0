@@ -1,4 +1,4 @@
-import LogoNavbar from '../../assets/images/Logo MetLife NavBar 2.webp';
+import LogoNavbar from '../../assets/images/Logo Vitamet NavBar 3.webp';
 
 export const Footer = () => {
     return (

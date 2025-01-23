@@ -1,5 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.light-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.bold-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+:root {
+    --primary-color: #014776;
+    --secondary-color: #9fc750;
+    --background-color: #8d8d8d;
+    --text-color: #ffebcd;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
 body {
-    background-color: #22629e;
+    background-color: var(--primary-color);
     margin: 0;
     padding: 0;
 }
@@ -12,7 +34,7 @@ body {
     justify-content: space-between;
     background-color: white;
     color: rgb(0, 0, 0);
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 1);
+    box-shadow: -4px 0 10px var(--shadow-color);
     width: 100%;
     z-index: 99;
 }
@@ -28,14 +50,6 @@ body {
     width: auto;
     margin: 5px;
     padding-left: 10px;
-    user-select: none;
-    pointer-events: none;
-}
-
-.logo-navbar-2 {
-    height: 15px;
-    width: auto;
-    margin-top: 5px;
     user-select: none;
     pointer-events: none;
 }
@@ -118,80 +132,146 @@ body {
     font-weight: bold;
 }
 
-/* ------------------------------------------------------------------------------------ FORM */
+/* -------------------------------------------------------------------------- LADING PAGE */
 
-.content-form {
-    padding: 40px;
-    margin-bottom: 50px;
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+/* --------------------------------- SECTION 1 LANDING*/
+
+.section-1-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.section-1-container::before {
+    content: '';
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    background-image: url('/src/assets/images/imagen section 1 landing.webp');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.section-1-titulo {
+    color: var(--text-color);
+    padding: 0 20px;
+    padding-top: 30px;
+}
+
+.section-1-titulo h1,
+.section-1-titulo h2,
+.section-1-icono h3 {
+    margin: 0;
+}
+
+.section-1-titulo h1 {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.section-1-titulo h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.section-1-icono-2 {
+    display: none;
+}
+
+.section-1-img {
+    display: none;
+}
+
+.section-1-icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.section-1-icono img {
+    width: 60px;
+}
+
+.section-1-icono h3 {
+    font-size: 16px;
+}
+
+/* --------------------------------- SECTION 2 LANDING*/
+
+.section-2-container {
+    background-color: var(--secondary-color);
+    margin-top: -18px;
+}
+
+/* -------------------------------------------------------------------------- FORM */
+
+.form {
+    padding: 20px 20px;
 }
 
 .campos-obligatorios {
-    font-size: 14px;
-    color: #666;
+    text-align: end;
+    color: var(--text-color);
 }
 
-.input-control {
-    width: 100%;
-    margin-bottom: 15px;
+.campos-obligatorios p {
+    margin: 0;
+    padding-bottom: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    text-align: left;
+.campo-precalificar-form select,
+.campo-precalificar-form input {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.campo-precalificar-form {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
 }
 
 .form-control {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-.form-control:focus {
-    border-color: #9fc750;
-    outline: none;
-    box-shadow: 0 0 5px rgba(159, 199, 80, 0.5);
+    border-radius: 16px;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    background-color: white;
+    border: none;
 }
 
 .text-danger {
-    font-size: 11px;
-    display: block;
-    color: #e63946;
+    color: #eb0808;
+    padding: 0;
+    margin: 0;
+    margin-top: -16px;
+}
+
+.envio-form-container {
+    display: flex;
+    align-items: center;
+}
+
+.botonForm {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-color: #ffffff;
+    padding: 6px 13px;
+    line-height: 1.5;
+    border-radius: 16px;
+    color: #ffffff;
+    background: none;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .spinner-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.boton-form {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #1497ee;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.boton-form:hover {
-    background-color: #0d6c9e;
-}
-
-.boton-form:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    margin-left: 10px;
 }
 
 /* ------------------------------------------------------------------------------------ FOOTER */
@@ -208,25 +288,11 @@ label {
     pointer-events: none;
 }
 
-/* ------------------------------------------------------------------------------------ SECTION */
-
-.section-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-}
-
 @media (min-width: 576px) {
     /* ------------------------------------------------------------------------------------ NAVBAR */
     .logo-navbar {
         height: 40px;
         padding-left: 30px;
-    }
-
-    .logo-navbar-2 {
-        height: 20px;
-        margin-top: 7px;
     }
 
     /* --------------------------------- MENU HAMBURGESA*/
@@ -246,6 +312,48 @@ label {
         padding-right: 40px;
     }
 
+    /* -------------------------------------------------------------------------- LADING PAGE */
+
+    /* --------------------------------- SECTION 1 LANDING*/
+
+    .section-1-container::before {
+        margin-left: 150px;
+    }
+
+    .section-1-titulo {
+        padding: 0 40px;
+        padding-top: 30px;
+    }
+
+    .section-1-titulo h1 {
+        font-size: 30px;
+    }
+
+    .section-1-titulo h2 {
+        font-size: 20px;
+    }
+
+    .section-1-icono img {
+        width: 70px;
+    }
+
+    /* --------------------------------- SECTION 2 LANDING*/
+
+    .section-2-container {
+        margin-top: -26px;
+    }
+
+    /* -------------------------------------------------------------------------- FORM */
+
+    .form {
+        padding: 30px 40px;
+    }
+
+    .botonForm {
+        padding: 4px 20px;
+        font-size: 16px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .logo-footer {
@@ -261,11 +369,6 @@ label {
         padding-left: 10px;
     }
 
-    .logo-navbar-2 {
-        height: 15px;
-        margin-top: 7px;
-    }
-
     .menu-nav {
         display: flex;
         list-style: none;
@@ -276,8 +379,110 @@ label {
         font-size: 16px;
     }
 
+    .linea-separadora {
+        margin-left: 5px;
+        user-select: none;
+    }
+
     .burger-menu {
         display: none;
+    }
+
+    /* -------------------------------------------------------------------------- LADING PAGE */
+
+    /* --------------------------------- SECTION 1 LANDING*/
+
+    .section-1-container {
+        padding-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-1-container::before {
+        background-image: none;
+    }
+
+    .section-1-titulo {
+        padding: 0 10px;
+        padding-top: 30px;
+    }
+
+    .section-1-titulo h1 {
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    .section-1-titulo h2 {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+    .section-1-icono-2 {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    .section-1-icono-2 img {
+        width: 50px;
+    }
+
+    .section-1-icono-2 h3 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .section-1-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding-top: 45px;
+        padding-left: 90px;
+        padding-right: 110px;
+    }
+
+    .img-1-section-1 {
+        position: absolute;
+        user-select: none;
+        pointer-events: none;
+        width: 300px;
+        height: auto;
+        z-index: 2;
+    }
+
+    .img-2-section-1 {
+        position: absolute;
+        user-select: none;
+        pointer-events: none;
+        width: 500px;
+        height: auto;
+        z-index: 1;
+    }
+
+    .section-1-icono {
+        display: none;
+    }
+
+    /* --------------------------------- SECTION 2 LANDING*/
+
+    .section-2-container {
+        margin-top: -18px;
+    }
+
+    /* -------------------------------------------------------------------------- FORM */
+
+    .form {
+        padding: 20px 20px;
+        z-index: 3;
+        width: 210px;
+    }
+
+    .campos-obligatorios p {
+        font-size: 12px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -295,15 +500,82 @@ label {
         padding-left: 35px;
     }
 
-    .logo-navbar-2 {
-        height: 20px;
-        margin-top: 9px;
-    }
-
     .menu-nav {
         gap: 10px;
         padding-right: 35px;
         font-size: 19px;
+    }
+
+    .linea-separadora {
+        margin-left: 10px;
+    }
+
+    /* -------------------------------------------------------------------------- LADING PAGE */
+
+    /* --------------------------------- SECTION 1 LANDING*/
+
+    .section-1-titulo {
+        padding: 0 10px;
+        padding-top: 40px;
+        margin-right: 50px;
+    }
+
+    .section-1-titulo h1 {
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+
+    .section-1-titulo h2 {
+        font-size: 22px;
+        padding-bottom: 40px;
+    }
+
+    .section-1-icono-2 {
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .section-1-icono-2 img {
+        width: 70px;
+    }
+
+    .section-1-icono-2 h3 {
+        font-size: 18px;
+    }
+
+    .section-1-img {
+        padding-top: 20px;
+        padding-left: 90px;
+        padding-right: 160px;
+    }
+
+    .img-1-section-1 {
+        width: 400px;
+    }
+
+    .img-2-section-1 {
+        width: 500px;
+    }
+
+    /* --------------------------------- SECTION 2 LANDING*/
+
+    .section-2-container {
+        margin-top: -19px;
+    }
+
+    /* -------------------------------------------------------------------------- FORM */
+
+    .form {
+        padding: 20px 20px;
+        z-index: 3;
+        width: 250px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .campos-obligatorios p {
+        font-size: 12px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -321,14 +593,81 @@ label {
         padding-left: 65px;
     }
 
-    .logo-navbar-2 {
-        margin-top: 15px;
-    }
-
     .menu-nav {
         gap: 13px;
         padding-right: 60px;
         font-size: 22px;
+    }
+
+    .linea-separadora {
+        margin-left: 13px;
+    }
+
+    /* -------------------------------------------------------------------------- LADING PAGE */
+
+    /* --------------------------------- SECTION 1 LANDING*/
+
+    .section-1-titulo {
+        padding-top: 40px;
+        margin-right: 50px;
+    }
+
+    .section-1-titulo h1 {
+        font-size: 50px;
+        padding-bottom: 30px;
+    }
+
+    .section-1-titulo h2 {
+        font-size: 24px;
+        padding-bottom: 50px;
+    }
+
+    .section-1-icono-2 {
+        gap: 20px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .section-1-icono-2 img {
+        width: 80px;
+    }
+
+    .section-1-icono-2 h3 {
+        font-size: 18px;
+    }
+
+    .section-1-img {
+        padding-top: 20px;
+        padding-left: 150px;
+        padding-right: 200px;
+    }
+
+    .img-1-section-1 {
+        width: 400px;
+    }
+
+    .img-2-section-1 {
+        width: 500px;
+    }
+
+    /* --------------------------------- SECTION 2 LANDING*/
+
+    .section-2-container {
+        margin-top: -23px;
+    }
+
+    /* -------------------------------------------------------------------------- FORM */
+
+    .form {
+        padding: 20px 20px;
+        z-index: 3;
+        width: 350px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .campos-obligatorios p {
+        font-size: 12px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -346,14 +685,81 @@ label {
         padding-left: 75px;
     }
 
-    .logo-navbar-2 {
-        margin-top: 25px;
-    }
-
     .menu-nav {
         gap: 16px;
         padding-right: 80px;
         font-size: 24px;
+    }
+
+    .linea-separadora {
+        margin-left: 16px;
+    }
+
+    /* -------------------------------------------------------------------------- LADING PAGE */
+
+    /* --------------------------------- SECTION 1 LANDING*/
+
+    .section-1-titulo {
+        padding-top: 60px;
+        margin-right: 80px;
+    }
+
+    .section-1-titulo h1 {
+        font-size: 60px;
+        padding-bottom: 40px;
+    }
+
+    .section-1-titulo h2 {
+        font-size: 28px;
+        padding-bottom: 60px;
+    }
+
+    .section-1-icono-2 {
+        gap: 30px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .section-1-icono-2 img {
+        width: 90px;
+    }
+
+    .section-1-icono-2 h3 {
+        font-size: 22px;
+    }
+
+    .section-1-img {
+        padding-top: 20px;
+        padding-left: 100px;
+        padding-right: 200px;
+    }
+
+    .img-1-section-1 {
+        width: 500px;
+    }
+
+    .img-2-section-1 {
+        width: 600px;
+    }
+
+    /* --------------------------------- SECTION 2 LANDING*/
+
+    .section-2-container {
+        margin-top: -24px;
+    }
+
+    /* -------------------------------------------------------------------------- FORM */
+
+    .form {
+        padding: 20px 20px;
+        z-index: 3;
+        width: 400px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .campos-obligatorios p {
+        font-size: 12px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -371,14 +777,90 @@ label {
         padding-left: 130px;
     }
 
-    .logo-navbar-2 {
-        margin-top: 35px;
-    }
-
     .menu-nav {
         gap: 19px;
         padding-right: 150px;
         font-size: 28px;
+    }
+
+    .linea-separadora {
+        margin-left: 19px;
+    }
+
+    /* -------------------------------------------------------------------------- LADING PAGE */
+
+    /* --------------------------------- SECTION 1 LANDING*/
+
+    .section-1-titulo {
+        padding-top: 70px;
+        margin-right: 80px;
+    }
+
+    .section-1-titulo h1 {
+        font-size: 70px;
+        padding-bottom: 5cqi;
+    }
+
+    .section-1-titulo h2 {
+        font-size: 30px;
+        padding-bottom: 70px;
+    }
+
+    .section-1-icono-2 {
+        gap: 40px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .section-1-icono-2 img {
+        width: 100px;
+    }
+
+    .section-1-icono-2 h3 {
+        font-size: 24px;
+    }
+
+    .section-1-img {
+        padding-top: 60px;
+        padding-left: 200px;
+        padding-right: 300px;
+    }
+
+    .img-1-section-1 {
+        width: 600px;
+    }
+
+    .img-2-section-1 {
+        width: 600px;
+    }
+
+    /* --------------------------------- SECTION 2 LANDING*/
+
+    .section-2-container {
+        margin-top: -18px;
+    }
+
+    /* -------------------------------------------------------------------------- FORM */
+
+    .form {
+        padding: 20px 20px;
+        z-index: 3;
+        width: 450px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .campos-obligatorios p {
+        font-size: 14px;
+    }
+
+    .envio-form-container {
+        padding-top: 20px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */

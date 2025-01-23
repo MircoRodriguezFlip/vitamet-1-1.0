@@ -5,6 +5,41 @@ export const useForm = (initialState, submitCallback) => {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
 
+    const estados = [
+        '',
+        'Aguascalientes',
+        'Baja California',
+        'Baja California Sur',
+        'Campeche',
+        'Chiapas',
+        'Chihuahua',
+        'Coahuila',
+        'Colima',
+        'Durango',
+        'Guanajuato',
+        'Guerrero',
+        'Hidalgo',
+        'Jalisco',
+        'México',
+        'Michoacán',
+        'Morelos',
+        'Nayarit',
+        'Nuevo León',
+        'Oaxaca',
+        'Puebla',
+        'Querétaro',
+        'Quintana Roo',
+        'San Luis Potosí',
+        'Sinaloa',
+        'Sonora',
+        'Tabasco',
+        'Tamaulipas',
+        'Tlaxcala',
+        'Veracruz',
+        'Yucatán',
+        'Zacatecas',
+    ];
+
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -22,14 +57,13 @@ export const useForm = (initialState, submitCallback) => {
     const validateForm = () => {
         const newErrors = {};
 
-        // Validar nombre completo
         validateNombreCompleto(newErrors);
 
-        // Validar teléfono si corresponde
         validateTelefono(newErrors);
 
-        // Validar correo si corresponde
         validateEmail(newErrors);
+
+        validateEstado(newErrors);
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -56,6 +90,12 @@ export const useForm = (initialState, submitCallback) => {
         }
     };
 
+    const validateEstado = (newErrors) => {
+        if (!formData.estado.trim()) {
+            newErrors.estado = 'Selecciona un estado.';
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
@@ -67,6 +107,7 @@ export const useForm = (initialState, submitCallback) => {
                 nombre: formData.nombreCompleto,
                 telefono: formData.telefono,
                 email: formData.email,
+                estado: formData.estado,
             };
 
             const response = await fetch('http://localhost:5000/submit', {
@@ -95,5 +136,6 @@ export const useForm = (initialState, submitCallback) => {
         loading,
         handleChange,
         handleSubmit,
+        estados,
     };
 };

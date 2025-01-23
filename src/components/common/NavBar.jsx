@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import LogoNavbar from '../../assets/images/Logo MetLife NavBar 2.webp';
-import LogoNavbar2 from '../../assets/images/Logo Vitamet navbar.webp';
+import LogoNavbar from '../../assets/images/Logo Vitamet NavBar 3.webp';
 import { BurgerMenu } from './BurgerMenu';
 import { navLinks } from '../utils/NavBarMenu';
 
@@ -13,7 +12,6 @@ export const NavBar = () => {
                     <NavLink to="/" aria-label="Ir a la página principal">
                         <img src={LogoNavbar} alt="Logotipo de MetLife en la barra de navegación" className="logo-navbar" loading="lazy" />
                     </NavLink>
-                    <img src={LogoNavbar2} alt="Logotipo de VitaMet en la barra de navegación" className="logo-navbar-2" loading="lazy" />
                 </div>
 
                 {/* Menú de Navegación */}
@@ -23,6 +21,7 @@ export const NavBar = () => {
                             <NavLink to={item.to} title={item.title}>
                                 {item.label}
                             </NavLink>
+                            {item.id !== navLinks[navLinks.length - 1].id && <span className="linea-separadora">|</span>}
                         </li>
                     ))}
                 </ul>

@@ -15,17 +15,18 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process
 const tableName = process.env.AIRTABLE_TABLE_NAME;
 
 app.post('/submit', async (req, res) => {
-    const { nombre, email, telefono } = req.body;
+    const { nombre, email, telefono, estado } = req.body;
 
-    if (!nombre || !email || !telefono) {
+    if (!nombre || !email || !telefono || !estado) {
         return res.status(400).json({ message: 'Todos los campos son obligatorios.' });
     }
 
     try {
         const record = await base(tableName).create({
-            nombre_completo: nombre,
-            telefono: telefono,
+            Name: nombre,
+            phone: telefono,
             email: email,
+            estado: estado,
         });
         res.status(200).json({ message: 'Formulario enviado correctamente.', record });
     } catch (error) {

@@ -4,11 +4,12 @@ import Swal from 'sweetalert2';
 import { useForm } from '../../hooks/useForm';
 
 export const Form = () => {
-    const { formData, errors, loading, handleChange, handleSubmit } = useForm(
+    const { formData, errors, loading, handleChange, handleSubmit, estados } = useForm(
         {
             nombreCompleto: '',
             telefono: '+52',
             email: '',
+            estado: '',
         },
         (success, data) => {
             if (success) {
@@ -30,79 +31,98 @@ export const Form = () => {
     );
 
     return (
-        <form onSubmit={handleSubmit} className="content-form " noValidate>
-            <p className="campos-obligatorios">(*) Campos obligatorios</p>
-
-            <div className="form-block-1">
-                {/* NOMBRE COMPLETO */}
-                <div className="input-control">
-                    <label htmlFor="nombreCompleto" className="bold-text">
-                        *Nombre Completo:
-                    </label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="nombreCompleto"
-                        name="nombreCompleto"
-                        value={formData.nombreCompleto}
-                        onChange={handleChange}
-                    />
-                    {errors.nombreCompleto && (
-                        <small className="text-danger" aria-live="assertive">
-                            {errors.nombreCompleto}
-                        </small>
-                    )}
-                </div>
+        <form onSubmit={handleSubmit} className="form" noValidate>
+            <div className="campos-obligatorios">
+                <p className="light-text">(*) Campos obligatorios</p>
             </div>
 
-            <div className="form-block-2">
-                {/* TELÉFONO */}
+            {/* NOMBRE COMPLETO */}
+            <div className="campo-precalificar-form">
+                <label htmlFor="nombreCompleto" className="light-text">
+                    *Nombre Completo:
+                </label>
+                <input
+                    type="text"
+                    className="form-control"
+                    id="nombreCompleto"
+                    name="nombreCompleto"
+                    value={formData.nombreCompleto}
+                    onChange={handleChange}
+                />
+                {errors.nombreCompleto && (
+                    <small className="text-danger" aria-live="assertive">
+                        {errors.nombreCompleto}
+                    </small>
+                )}
+            </div>
 
-                <div className="input-control">
-                    <label htmlFor="telefono" className="bold-text">
-                        *Teléfono:
-                    </label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="telefono"
-                        name="telefono"
-                        value={formData.telefono}
-                        onChange={handleChange}
-                        maxLength="13"
-                    />
-                    {errors.telefono && (
-                        <small className="text-danger" aria-live="assertive">
-                            {errors.telefono}
-                        </small>
-                    )}
-                </div>
+            {/* EMAIL */}
 
-                {/* EMAIL */}
+            <div className="campo-precalificar-form">
+                <label htmlFor="email" className="light-text">
+                    *Correo Electrónico:
+                </label>
+                <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
+                {errors.email && (
+                    <small className="text-danger" aria-live="assertive">
+                        {errors.email}
+                    </small>
+                )}
+            </div>
 
-                <div className="input-control">
-                    <label htmlFor="email" className="bold-text">
-                        *Correo Electrónico:
-                    </label>
-                    <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
-                    {errors.email && (
-                        <small className="text-danger" aria-live="assertive">
-                            {errors.email}
-                        </small>
-                    )}
-                </div>
+            {/* TELÉFONO */}
+
+            <div className="campo-precalificar-form">
+                <label htmlFor="telefono" className="light-text">
+                    *Teléfono:
+                </label>
+                <input
+                    type="text"
+                    className="form-control"
+                    id="telefono"
+                    name="telefono"
+                    value={formData.telefono}
+                    onChange={handleChange}
+                    maxLength="13"
+                />
+                {errors.telefono && (
+                    <small className="text-danger" aria-live="assertive">
+                        {errors.telefono}
+                    </small>
+                )}
+            </div>
+
+            {/* ESTADO */}
+            <div className="campo-precalificar-form">
+                <label htmlFor="estado" className="light-text">
+                    *Estado donde vives:
+                </label>
+                <select className="form-control select-control" id="estado" name="estado" value={formData.estado} onChange={handleChange}>
+                    {estados.map((estado) => (
+                        <option key={estado} value={estado}>
+                            {estado}
+                        </option>
+                    ))}
+                </select>
+                {errors.estado && (
+                    <small className="text-danger" aria-live="assertive">
+                        {errors.estado}
+                    </small>
+                )}
             </div>
 
             {/* BOTÓN DE ENVÍO */}
-            <div className=" content-envio">
+            <div className="envio-form-container">
+                <button type="submit" className="botonForm bold-text" title="Haz clic para enviarnos tus datos" disabled={loading}>
+                    ENVIAR
+                </button>
+
+                {/* Mostrar el spinner solo si el formulario está en proceso de envío */}
                 {loading && (
                     <div className="spinner-container" aria-live="assertive">
                         <FontAwesomeIcon icon={faSpinner} spin />
                     </div>
                 )}
-                <button type="submit" className="boton-form bold-text" title="Enviar mi información de contacto" disabled={loading}>
-                    Enviar
-                </button>
             </div>
         </form>
     );
