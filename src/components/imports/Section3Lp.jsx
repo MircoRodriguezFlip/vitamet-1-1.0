@@ -1,7 +1,64 @@
+import imgMoneda1 from '../../assets/images/moneda 1.webp';
+import imgMoneda2 from '../../assets/images/moneda 2.webp';
+import imgMoneda3 from '../../assets/images/moneda 3.webp';
+import imgMoneda4 from '../../assets/images/moneda 4.webp';
+
 export const Section3LP = () => {
     return (
-        <section className="section-container">
-            <h1>Section 3 Landing Page</h1>
+        <section className="section-3-container">
+            <div className="section-3-1">
+                <h2 className="bold-text">AHORRA DESDE:</h2>
+                <p className="light-text">
+                    $2,500 al mes y deja que tu dinero trabaje por ti. Al llegar a los 65 años, podrías disfrutar de un capital que transforme tu
+                    retiro en la etapa más tranquila y próspera de tu vida.
+                </p>
+            </div>
+
+            <div className="section-3-2">
+                <div className="grupo-moneda">
+                    <div className="burbuja-section-3 burbuja-derecha">
+                        <p className="light-text">DATOS</p>
+                    </div>
+
+                    <div className="img-moneda fondo-moneda-1">
+                        <img src={imgMoneda1} className="img-moneda-1" alt="" />
+                    </div>
+                </div>
+
+                <div className="grupo-moneda">
+                    <div className="burbuja-section-3 burbuja-derecha">
+                        <p className="light-text">DATOS</p>
+                    </div>
+
+                    <div className="img-moneda fondo-moneda-2">
+                        <img src={imgMoneda2} className="img-moneda-2" alt="" />
+                    </div>
+                </div>
+
+                <div className="grupo-moneda">
+                    <div className="burbuja-section-3 burbuja-derecha">
+                        <p className="light-text">DATOS</p>
+                    </div>
+
+                    <div className="img-moneda fondo-moneda-3">
+                        <img src={imgMoneda3} className="img-moneda-3" alt="" />
+                    </div>
+                </div>
+
+                <div className="grupo-moneda">
+                    <div className="burbuja-section-3 burbuja-derecha">
+                        <p className="light-text">DATOS</p>
+                    </div>
+
+                    <div className="img-moneda fondo-moneda-4">
+                        <img src={imgMoneda4} className="img-moneda-4" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="section-3-3">
+                <h3 className="bold-text">DATOS DATOS DATOS DATOS DATOS DATOS DATOS DATOS DATOS DATOS DATOS DATOS</h3>
+            </div>
         </section>
     );
 };
