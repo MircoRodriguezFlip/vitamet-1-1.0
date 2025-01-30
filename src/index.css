@@ -380,6 +380,97 @@ body {
     text-align: center;
 }
 
+/* --------------------------------- SECTION 4 LANDING*/
+
+.section-4-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    background-image: url('/src/assets/images/fondo abuelitos.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.section-4-container h2,
+.section-4-container h3,
+.section-4-container p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.section-4-1 {
+    width: 340px;
+}
+
+.section-4-1 h2 {
+    font-size: 25px;
+    padding: 20px 0;
+}
+
+.section-4-1 h3 {
+    font-size: 16px;
+    padding: 0 25px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.section-4-2 {
+    text-align: center;
+    width: 360px;
+    padding: 30px 0;
+    color: var(--text-color);
+}
+
+.section-4-2 label {
+    font-size: 13px;
+}
+
+.calculadora-2 {
+    margin-right: 5px;
+}
+
+.calculadora-1,
+.calculadora-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.calculadora-igual {
+    padding-bottom: 20px;
+}
+
+.calculadora-1 p,
+.calculadora-2 p {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.input-calculo {
+    width: 120px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    background-color: var(--secondary-color);
+    box-shadow: 0 10px 10px var(--shadow-color);
+    appearance: textfield;
+}
+
+.input-calculo::-webkit-outer-spin-button,
+.input-calculo::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calculadora-3 label {
+    font-size: 16px;
+}
+
 /* -------------------------------------------------------------------------- FORM */
 
 .form {
@@ -622,6 +713,64 @@ body {
 
     .section-3-3 {
         padding: 30px 10px;
+    }
+
+    /* --------------------------------- SECTION 4 LANDING*/
+
+    .section-4-1 {
+        width: 550px;
+        margin-left: 10px;
+    }
+
+    .section-4-1 h2 {
+        font-size: 30px;
+        padding: 25px 0;
+    }
+
+    .section-4-1 h3 {
+        font-size: 16px;
+        padding: 0 25px;
+        padding-bottom: 10px;
+    }
+
+    .section-4-2 {
+        width: 500px;
+        padding: 30px 0;
+    }
+
+    .section-4-2 label {
+        font-size: 16px;
+    }
+
+    .calculadora-2 {
+        margin-right: 5px;
+    }
+
+    .calculadora-1,
+    .calculadora-2 {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-igual {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-1 p,
+    .calculadora-2 p {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .input-calculo {
+        width: 180px;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        text-align: center;
+    }
+
+    .calculadora-3 label {
+        font-size: 18px;
     }
 
     /* -------------------------------------------------------------------------- FORM */
@@ -886,6 +1035,63 @@ body {
         padding: 30px 40px;
     }
 
+    /* --------------------------------- SECTION 4 LANDING*/
+
+    .section-4-1 {
+        text-align: center;
+        width: 750px;
+        margin-left: 0px;
+    }
+
+    .section-4-1 h2 {
+        font-size: 35px;
+        padding: 20px 0;
+    }
+
+    .section-4-1 h3 {
+        font-size: 16px;
+    }
+
+    .section-4-2 {
+        width: 700px;
+        padding: 30px 0;
+    }
+
+    .section-4-2 label {
+        font-size: 18px;
+    }
+
+    .calculadora-2 {
+        margin-right: 5px;
+    }
+
+    .calculadora-1,
+    .calculadora-2 {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-igual {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-1 p,
+    .calculadora-2 p {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .input-calculo {
+        width: 250px;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        text-align: center;
+    }
+
+    .calculadora-3 label {
+        font-size: 22px;
+    }
+
     /* -------------------------------------------------------------------------- FORM */
 
     .form {
@@ -1086,6 +1292,63 @@ body {
         padding: 30px 40px;
     }
 
+    /* --------------------------------- SECTION 4 LANDING*/
+
+    .section-4-1 {
+        text-align: center;
+        width: 900px;
+        margin-left: 0px;
+    }
+
+    .section-4-1 h2 {
+        font-size: 45px;
+        padding: 25px 0;
+    }
+
+    .section-4-1 h3 {
+        font-size: 20px;
+    }
+
+    .section-4-2 {
+        width: 900px;
+        padding: 30px 0;
+    }
+
+    .section-4-2 label {
+        font-size: 18px;
+    }
+
+    .calculadora-2 {
+        margin-right: 5px;
+    }
+
+    .calculadora-1,
+    .calculadora-2 {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-igual {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-1 p,
+    .calculadora-2 p {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .input-calculo {
+        width: 300px;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        text-align: center;
+    }
+
+    .calculadora-3 label {
+        font-size: 22px;
+    }
+
     /* -------------------------------------------------------------------------- FORM */
 
     .form {
@@ -1282,6 +1545,78 @@ body {
 
     .section-3-3 {
         padding: 30px 40px;
+    }
+
+    /* --------------------------------- SECTION 4 LANDING*/
+
+    .section-4-1 {
+        width: 1100px;
+    }
+
+    .section-4-1 h2 {
+        font-size: 55px;
+        padding: 25px 0;
+    }
+
+    .section-4-1 h3 {
+        font-size: 24px;
+    }
+
+    .section-4-2 {
+        display: flex;
+        width: 1150px;
+        padding: 30px 0;
+        padding-bottom: 50px;
+        margin-left: 40px;
+    }
+
+    .input-control {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calculadora-igual {
+        padding: 20px;
+        margin-top: 10px;
+        padding-bottom: 0;
+    }
+
+    .section-4-2 label {
+        font-size: 16px;
+    }
+
+    .calculadora-2 {
+        margin-right: 5px;
+    }
+
+    .calculadora-1,
+    .calculadora-2 {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-1 p,
+    .calculadora-2 p {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .input-calculo {
+        width: 180px;
+        height: 30px;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        text-align: center;
+    }
+
+    .calculadora-3 label {
+        font-size: 16px;
+    }
+
+    .calculadora-3 p {
+        margin-top: 10px;
     }
 
     /* -------------------------------------------------------------------------- FORM */
@@ -1486,6 +1821,72 @@ body {
         font-size: 25px;
     }
 
+    /* --------------------------------- SECTION 4 LANDING*/
+
+    .section-4-1 {
+        width: 1300px;
+    }
+
+    .section-4-1 h2 {
+        font-size: 55px;
+        padding: 25px 0;
+    }
+
+    .section-4-1 h3 {
+        font-size: 26px;
+    }
+
+    .section-4-2 {
+        align-items: center;
+        justify-content: center;
+        width: 1300px;
+        padding: 40px 0;
+        padding-bottom: 70px;
+        margin-left: 0px;
+    }
+
+    .calculadora-igual {
+        padding: 0 20px;
+        margin-top: 0px;
+        padding-bottom: 0;
+    }
+
+    .section-4-2 label {
+        font-size: 16px;
+    }
+
+    .calculadora-2 {
+        margin-right: 0px;
+    }
+
+    .calculadora-1,
+    .calculadora-2 {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-1 p,
+    .calculadora-2 p {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .input-calculo {
+        width: 200px;
+        height: 40px;
+    }
+
+    .calculadora-3 label {
+        font-size: 18px;
+    }
+
+    .calculadora-3 {
+        margin-bottom: 35px;
+    }
+
+    .calculadora-3 p {
+        margin-top: 10px;
+    }
+
     /* -------------------------------------------------------------------------- FORM */
 
     .form {
@@ -1687,6 +2088,63 @@ body {
 
     .section-3-3 h3 {
         font-size: 30px;
+    }
+
+    /* --------------------------------- SECTION 4 LANDING*/
+
+    .section-4-1 {
+        width: 1600px;
+    }
+
+    .section-4-1 h2 {
+        font-size: 65px;
+        padding: 25px 0;
+    }
+
+    .section-4-1 h3 {
+        font-size: 30px;
+    }
+
+    .section-4-2 {
+        width: 1600px;
+        padding: 70px 0;
+        padding-bottom: 80px;
+    }
+
+    .calculadora-igual {
+        padding: 0 20px;
+    }
+
+    .section-4-2 label {
+        font-size: 20px;
+    }
+
+    .calculadora-1,
+    .calculadora-2 {
+        padding-bottom: 20px;
+    }
+
+    .calculadora-1 p,
+    .calculadora-2 p {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .input-calculo {
+        width: 250px;
+        height: 60px;
+    }
+
+    .calculadora-3 label {
+        font-size: 20px;
+    }
+
+    .calculadora-3 {
+        margin-bottom: 42px;
+    }
+
+    .calculadora-3 p {
+        margin-top: 25px;
     }
 
     /* -------------------------------------------------------------------------- FORM */
