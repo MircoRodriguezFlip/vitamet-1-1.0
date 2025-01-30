@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/common/NavBar';
 import { LandingPage } from './components/pages/LandingPage';
+import { PoliticasPage } from './components/pages/PoliticasPage';
 import { Footer } from './components/common/Footer';
 import { ScrollToTop } from './hooks/ScrollTop';
 
@@ -13,6 +14,7 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<LandingPage />} />
+                <Route path="/politica-privacidad" element={<PoliticasPage />} />
             </Routes>
 
             <Footer />
