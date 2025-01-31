@@ -11,7 +11,7 @@ export const Section4LP = () => {
     const [hoveredTooltip, setHoveredTooltip] = useState(null);
 
     const dato3 = dato1 - dato2;
-    const dato5 = dato3 * dato4;
+    const dato5 = dato3 * 12 * dato4;
 
     return (
         <section className="section-4-container">
@@ -40,7 +40,7 @@ export const Section4LP = () => {
                     </div>
 
                     <div>
-                        <p className="bold-text"> x </p>
+                        <p className="bold-text"> - </p>
                     </div>
 
                     <div className="input-control">
@@ -77,7 +77,7 @@ export const Section4LP = () => {
                                 {hoveredTooltip === 'restantes' && <Tooltip text="Años que vivirás después de jubilarte." />}
                             </span>
                         </label>
-                        <input type="number" value={dato3} readOnly className="input-calculo" />
+                        <input type="text" value={`${dato3} (${dato3 * 12} meses)`} readOnly className="input-calculo" />
                     </div>
 
                     <div>
@@ -109,7 +109,7 @@ export const Section4LP = () => {
                     <label htmlFor="dato5" className="light-text">
                         Ingreso requerido
                     </label>
-                    <p className="bold-text">{dato5}</p>
+                    <p className="bold-text">{dato5} MXN</p>
                 </div>
             </div>
         </section>

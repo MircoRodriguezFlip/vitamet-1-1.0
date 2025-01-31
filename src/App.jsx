@@ -10,7 +10,7 @@ function App() {
         <BrowserRouter basename="/vitamet-1-1.0">
             <ScrollToTop />
 
-            <NavBar />
+            <NavBar id="inicio" />
 
             <Routes>
                 <Route path="/" element={<LandingPage />} />
