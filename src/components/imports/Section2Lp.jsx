@@ -8,13 +8,10 @@ export const Section2LP = () => {
 
                 <p className="light-text">En México, el 70% de los trabajadores no ahorran lo suficiente para su retiro.</p>
 
-                <p className="light-text">
-                    El sistema actual de pensiones no garantiza un ingreso digno: la mayoría solo recibirá entre el 20% y el 40% de su último sueldo.
-                </p>
+                <p className="light-text">En el sistema actual la mayoría solo recibirá entre el 20% y el 40% de su último sueldo.</p>
 
                 <p className="light-text">
-                    Haz cuentas: <strong>¿podrías vivir con ese porcentaje?</strong> No dejes tu futuro al azar. Construye la vida que mereces para
-                    mañana.
+                    <strong>¿podrías vivir con ese porcentaje?</strong> No dejes tu futuro al azar. Construye la vida que mereces para mañana.
                 </p>
             </div>
 
