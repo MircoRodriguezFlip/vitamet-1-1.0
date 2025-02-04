@@ -32,14 +32,10 @@ export const Form = () => {
 
     return (
         <form onSubmit={handleSubmit} className="form" noValidate>
-            <div className="campos-obligatorios">
-                <p className="light-text">(*) Campos obligatorios</p>
-            </div>
-
             {/* NOMBRE COMPLETO */}
             <div className="campo-precalificar-form">
                 <label htmlFor="nombreCompleto" className="light-text">
-                    *Nombre Completo:
+                    Nombre Completo:
                 </label>
                 <input
                     type="text"
@@ -60,7 +56,7 @@ export const Form = () => {
 
             <div className="campo-precalificar-form">
                 <label htmlFor="email" className="light-text">
-                    *Correo Electrónico:
+                    Correo Electrónico:
                 </label>
                 <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
                 {errors.email && (
@@ -74,7 +70,7 @@ export const Form = () => {
 
             <div className="campo-precalificar-form">
                 <label htmlFor="telefono" className="light-text">
-                    *Teléfono:
+                    Teléfono:
                 </label>
                 <input
                     type="text"
@@ -95,7 +91,7 @@ export const Form = () => {
             {/* ESTADO */}
             <div className="campo-precalificar-form">
                 <label htmlFor="estado" className="light-text">
-                    *Estado donde vives:
+                    Estado donde vives:
                 </label>
                 <select className="form-control select-control" id="estado" name="estado" value={formData.estado} onChange={handleChange}>
                     {estados.map((estado) => (
