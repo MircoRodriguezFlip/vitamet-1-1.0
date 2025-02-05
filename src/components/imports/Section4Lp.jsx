@@ -16,7 +16,7 @@ export const Section4LP = () => {
     return (
         <section className="section-4-container">
             <div className="section-4-1">
-                <h2 className="bold-text">¿Sabes cuánto necesitas ahorrar para disfrutar del retiro que deseas?</h2>
+                <h2 className="bold-text-2">¿Sabes cuánto necesitas ahorrar para disfrutar del retiro que deseas?</h2>
                 <h3 className="light-text">No dejes que la incertidumbre defina tu futuro.</h3>
                 <h3 className="light-text">¡Consulta hoy y descubre cuánto necesitas para alcanzar el sueldo ideal en tu retiro!</h3>
             </div>
@@ -109,7 +109,7 @@ export const Section4LP = () => {
                     <label htmlFor="dato5" className="light-text">
                         Ingreso requerido
                     </label>
-                    <p className="bold-text">{dato5} MXN</p>
+                    <p className="bold-text-2">{dato5} MXN</p>
                 </div>
             </div>
         </section>

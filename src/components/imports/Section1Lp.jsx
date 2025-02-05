@@ -9,7 +9,7 @@ export const Section1LP = () => {
         <section className="section-1-container">
             <div className="section-1-1">
                 <div className="section-1-titulo">
-                    <h1 className="bold-text">
+                    <h1 className="bold-text-2">
                         TU FUTURO <br /> ASEGURADO
                     </h1>
 
@@ -20,7 +20,7 @@ export const Section1LP = () => {
                     <div className="section-1-icono-2">
                         <img src={iconosection1} alt="" />
 
-                        <h3 className="bold-text">Asesoría Gratuita</h3>
+                        <h3 className="bold-text-2">Asesoría Gratuita</h3>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@ export const Section1LP = () => {
             <div className="section-1-icono">
                 <img src={iconosection1} alt="" />
 
-                <h3 className="bold-text">Asesoría Gratuita</h3>
+                <h3 className="bold-text-2">Asesoría Gratuita</h3>
             </div>
         </section>
     );

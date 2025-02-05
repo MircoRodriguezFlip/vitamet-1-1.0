@@ -113,7 +113,7 @@ export const Form = () => {
 
             {/* BOTÓN DE ENVÍO */}
             <div className="envio-form-container">
-                <button type="submit" className="botonForm bold-text" title="Haz clic para enviarnos tus datos" disabled={loading}>
+                <button type="submit" className="botonForm bold-text-2" title="Haz clic para enviarnos tus datos" disabled={loading}>
                     ENVIAR
                 </button>
 

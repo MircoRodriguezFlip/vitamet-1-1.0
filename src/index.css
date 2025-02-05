@@ -8,6 +8,12 @@
 
 .bold-text {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.bold-text-2 {
+    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     text-shadow: 2px 2px 4px var(--shadow-color);
 }
@@ -587,8 +593,8 @@ body {
 
 .container-texto-section-5 {
     text-align: center;
-    width: 180px;
-    height: 130px;
+    width: 190px;
+    height: 110px;
     background-color: var(--secondary-color);
     box-shadow: 0 10px 10px var(--shadow-color);
     border-radius: 10px;
@@ -596,7 +602,7 @@ body {
 }
 
 .container-texto-section-5 p {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .imagen-section-5 {
@@ -1019,8 +1025,8 @@ body {
     }
 
     .container-texto-section-5 {
-        width: 250px;
-        height: 130px;
+        width: 265px;
+        height: 120px;
         border-radius: 10px;
         padding: 20px;
     }
@@ -1410,7 +1416,7 @@ body {
 
     .container-texto-section-5 {
         width: 200px;
-        height: 130px;
+        height: 145px;
         padding: 10px;
     }
 
@@ -1759,7 +1765,7 @@ body {
 
     .container-texto-section-5 {
         width: 200px;
-        height: 130px;
+        height: 140px;
         padding: 10px;
     }
 
@@ -2084,9 +2090,9 @@ body {
     }
 
     .container-texto-section-5 {
-        width: 200px;
-        height: 150px;
-        padding: 20px;
+        width: 220px;
+        height: 160px;
+        padding: 10px;
     }
 
     .container-texto-section-5 p {

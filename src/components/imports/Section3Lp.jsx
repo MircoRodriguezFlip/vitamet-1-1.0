@@ -7,8 +7,8 @@ export const Section3LP = () => {
     return (
         <section className="section-3-container">
             <div className="section-3-1">
-                <h2 className="bold-text">AHORRA DESDE:</h2>
-                <p className="light-text">
+                <h2 className="bold-text-2">AHORRA DESDE:</h2>
+                <p className="bold-text">
                     $2,500 al mes y deja que tu dinero trabaje por ti. Al llegar a los 65 años, podrías disfrutar de un capital que transforme tu
                     retiro en la etapa más tranquila y próspera de tu vida.
                 </p>

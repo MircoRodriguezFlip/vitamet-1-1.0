@@ -4,13 +4,13 @@ export const Section2LP = () => {
     return (
         <section className="section-2-container">
             <div className="section-2-1">
-                <h2 className="bold-text">¿Sabías qué?</h2>
+                <h2 className="bold-text-2">¿Sabías qué?</h2>
 
-                <p className="light-text">En México, el 70% de los trabajadores no ahorran lo suficiente para su retiro.</p>
+                <p className="bold-text">En México, el 70% de los trabajadores no ahorran lo suficiente para su retiro.</p>
 
-                <p className="light-text">En el sistema actual la mayoría solo recibirá entre el 20% y el 40% de su último sueldo.</p>
+                <p className="bold-text">En el sistema actual la mayoría solo recibirá entre el 20% y el 40% de su último sueldo.</p>
 
-                <p className="light-text">
+                <p className="bold-text">
                     <strong>¿podrías vivir con ese porcentaje?</strong> No dejes tu futuro al azar. Construye la vida que mereces para mañana.
                 </p>
             </div>

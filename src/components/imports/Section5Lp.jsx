@@ -8,7 +8,7 @@ export const Section5LP = () => {
     return (
         <section className="section-5-container">
             <div className="section-5-1">
-                <h2 className="bold-text">Descubre los beneficios que te da PPR de VITAMET</h2>
+                <h2 className="bold-text-2">Descubre los beneficios que te da PPR de VITAMET</h2>
             </div>
 
             <div className="section-5-2">
@@ -16,7 +16,7 @@ export const Section5LP = () => {
                     <img src={fotoTexto1} alt="" />
 
                     <div className="container-texto-section-5">
-                        <p className="light-text">Rendimiento garantizado del 2% nominal anual sobre la reserva de la prima de las coberturas.</p>
+                        <p className="bold-text">Rendimiento garantizado del 2% nominal anual sobre la reserva de la prima de las coberturas.</p>
                     </div>
                 </div>
 
@@ -24,7 +24,7 @@ export const Section5LP = () => {
                     <img src={fotoTexto2} alt="" />
 
                     <div className="container-texto-section-5">
-                        <p className="light-text">En caso de fallecimiento, se incluye el servicio de asistencia funeraria.</p>
+                        <p className="bold-text">En caso de fallecimiento, se incluye el servicio de asistencia funeraria.</p>
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@ export const Section5LP = () => {
                     <img src={fotoTexto3} alt="" />
 
                     <div className="container-texto-section-5">
-                        <p className="light-text">Ofrece descuentos con proveedores, tarifas preferenciales, consultas médicas telefónicas, y más.</p>
+                        <p className="bold-text">Ofrece descuentos con proveedores, tarifas preferenciales, consultas médicas telefónicas, y más.</p>
                     </div>
                 </div>
 

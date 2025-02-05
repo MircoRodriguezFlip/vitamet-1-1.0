@@ -10,7 +10,7 @@ export const PoliticasPage = () => {
     return (
         <main className="politicas-page-container">
             <section className="politicas-titulos light-text">
-                <h1 className="bold-text">AVISO DE PRIVACIDAD</h1>
+                <h1 className="bold-text-2">AVISO DE PRIVACIDAD</h1>
                 <p>30/01/2025</p>
                 <h2 className="bold-text">TÉRMINOS Y CONDICIONES DE USO</h2>
             </section>
