@@ -35,155 +35,164 @@ export const Section4LP = () => {
             </div>
 
             <div className="section-4-2">
-                {/* Primera operación: dato1 - dato2 */}
-                <div className="calculadora-1">
-                    <div className="input-control">
-                        <label className="light-text">
-                            Esperanza de vida
-                            <span
-                                className="tooltip-container"
-                                onMouseEnter={() => setHoveredTooltip('esperanza')}
-                                onMouseLeave={() => setHoveredTooltip(null)}
-                            >
-                                <FontAwesomeIcon icon={faExclamationCircle} />
-                                {hoveredTooltip === 'esperanza' && (
-                                    <Tooltip text="Promedio de vida de tus ascendentes (edad de vida de tu papá, mamá, abuelos)." />
-                                )}
-                            </span>
-                        </label>
-                        <input
-                            type="text"
-                            value={dato1 === 0 ? '' : dato1}
-                            onChange={(e) => {
-                                const value = e.target.value;
-                                if (/^\d*$/.test(value)) {
-                                    // Solo permite números
-                                    setDato1(value === '' ? 0 : parseInt(value, 10));
-                                }
-                            }}
-                            className="input-calculo bold-text"
-                            maxLength={3}
-                        />
-                    </div>
-
-                    <div>
-                        <p className="bold-text"> - </p>
-                    </div>
-
-                    <div className="input-control">
-                        <label className="light-text">
-                            Edad de jubilación
-                            <span
-                                className="tooltip-container"
-                                onMouseEnter={() => setHoveredTooltip('jubilacion')}
-                                onMouseLeave={() => setHoveredTooltip(null)}
-                            >
-                                <FontAwesomeIcon icon={faExclamationCircle} />
-                                {hoveredTooltip === 'jubilacion' && <Tooltip text="Edad que te gustaría pensionarte." />}
-                            </span>
-                        </label>
-                        <input
-                            type="text"
-                            value={dato2 === 0 ? '' : dato2}
-                            onChange={(e) => {
-                                const value = e.target.value;
-                                if (/^\d*$/.test(value)) {
-                                    setDato2(value === '' ? 0 : parseInt(value, 10));
-                                }
-                            }}
-                            className="input-calculo bold-text"
-                            maxLength={3}
-                        />
-                    </div>
-                </div>
-
-                <div className="calculadora-igual">
-                    <p className="bold-text">=</p>
-                </div>
-
-                {/* Resultado de la primera operación: dato3 */}
-                <div className="calculadora-2">
-                    <div className="input-control">
-                        <label className="light-text">
-                            Total años restantes
-                            <span
-                                className="tooltip-container"
-                                onMouseEnter={() => setHoveredTooltip('restantes')}
-                                onMouseLeave={() => setHoveredTooltip(null)}
-                            >
-                                <FontAwesomeIcon icon={faExclamationCircle} />
-                                {hoveredTooltip === 'restantes' && <Tooltip text="Años después de pensionarte." />}
-                            </span>
-                        </label>
-                        <input type="text" value={`${dato1 - dato2} (${(dato1 - dato2) * 12} meses)`} readOnly className="input-calculo bold-text" />
-                    </div>
-
-                    <div>
-                        <p className="bold-text"> x </p>
-                    </div>
-
-                    <div className="input-control">
-                        <label className="light-text">
-                            Gastos de tu retiro
-                            <span
-                                className="tooltip-container"
-                                onMouseEnter={() => setHoveredTooltip('gastos')}
-                                onMouseLeave={() => setHoveredTooltip(null)}
-                            >
-                                <FontAwesomeIcon icon={faExclamationCircle} />
-                                {hoveredTooltip === 'gastos' && (
-                                    <Tooltip text="Que monto te gustaría recibir mensualmente que cumpla con tus necesidades de vida." />
-                                )}
-                            </span>
-                        </label>
-                        <input
-                            type="text"
-                            value={dato4 === 0 ? '' : dato4.toLocaleString('es-MX')}
-                            onChange={(e) => {
-                                let value = e.target.value.replace(/,/g, '');
-                                if (/^\d*$/.test(value)) {
-                                    setDato4(value === '' ? 0 : parseInt(value, 10));
-                                }
-                            }}
-                            className="input-calculo bold-text"
-                            maxLength={13}
-                        />
-                    </div>
-                </div>
-
-                {/* Botón de cálculo */}
-                <div className="calculadora-igual">
-                    <button className="btn-calcular bold-text" onClick={calcularIngreso}>
-                        CALCULAR
-                    </button>
-                </div>
-
-                <div className="contenido-oculto-section-4">
-                    {/* Resultado final: dato5 (se muestra solo si se ha calculado) */}
-                    {ingresoRequerido !== null && (
-                        <div className="calculadora-3">
-                            <label className="light-text" htmlFor="ingreso-requerido">
-                                Ingreso requerido
+                <div className="section-4-2-1">
+                    {/* Primera operación: dato1 - dato2 */}
+                    <div className="calculadora-1">
+                        <div className="input-control">
+                            <label className="light-text">
+                                Esperanza de vida
+                                <span
+                                    className="tooltip-container"
+                                    onMouseEnter={() => setHoveredTooltip('esperanza')}
+                                    onMouseLeave={() => setHoveredTooltip(null)}
+                                >
+                                    <FontAwesomeIcon icon={faExclamationCircle} className="icono-i" />
+                                    {hoveredTooltip === 'esperanza' && (
+                                        <Tooltip text="Promedio de vida de tus ascendentes (edad de vida de tu papá, mamá, abuelos)." />
+                                    )}
+                                </span>
                             </label>
-                            <p id="ingreso-requerido" className="bold-text-2">
-                                {ingresoRequerido.toLocaleString('es-MX')} MXN
-                            </p>
+                            <input
+                                type="text"
+                                value={dato1 === 0 ? '' : dato1}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    if (/^\d*$/.test(value)) {
+                                        // Solo permite números
+                                        setDato1(value === '' ? 0 : parseInt(value, 10));
+                                    }
+                                }}
+                                className="input-calculo bold-text"
+                                maxLength={3}
+                            />
                         </div>
-                    )}
 
-                    {mostrarCotizar && (
-                        <div className="boton-cotizar-section-4">
-                            <button className="btn-cotizar bold-text" onClick={scrollToTop}>
-                                COTIZAR
-                            </button>
+                        <div>
+                            <p className="bold-text"> - </p>
                         </div>
-                    )}
 
-                    {mostrarTexto && (
-                        <div className="texto-oculto-section-4">
-                            <p className="light-text">Recuerda que estos datos son ficticios, para tener un análisis real, por favor cotizar.</p>
+                        <div className="input-control">
+                            <label className="light-text">
+                                Edad de jubilación
+                                <span
+                                    className="tooltip-container"
+                                    onMouseEnter={() => setHoveredTooltip('jubilacion')}
+                                    onMouseLeave={() => setHoveredTooltip(null)}
+                                >
+                                    <FontAwesomeIcon icon={faExclamationCircle} className="icono-i" />
+                                    {hoveredTooltip === 'jubilacion' && <Tooltip text="Edad que te gustaría pensionarte." />}
+                                </span>
+                            </label>
+                            <input
+                                type="text"
+                                value={dato2 === 0 ? '' : dato2}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    if (/^\d*$/.test(value)) {
+                                        setDato2(value === '' ? 0 : parseInt(value, 10));
+                                    }
+                                }}
+                                className="input-calculo bold-text"
+                                maxLength={3}
+                            />
                         </div>
-                    )}
+                    </div>
+
+                    <div className="calculadora-igual">
+                        <p className="bold-text">=</p>
+                    </div>
+
+                    {/* Resultado de la primera operación: dato3 */}
+                    <div className="calculadora-2">
+                        <div className="input-control">
+                            <label className="light-text">
+                                Total años restantes
+                                <span
+                                    className="tooltip-container"
+                                    onMouseEnter={() => setHoveredTooltip('restantes')}
+                                    onMouseLeave={() => setHoveredTooltip(null)}
+                                >
+                                    <FontAwesomeIcon icon={faExclamationCircle} className="icono-i" />
+                                    {hoveredTooltip === 'restantes' && <Tooltip text="Años después de pensionarte." />}
+                                </span>
+                            </label>
+                            <input
+                                type="text"
+                                value={`${dato1 - dato2} (${(dato1 - dato2) * 12} meses)`}
+                                readOnly
+                                className="input-calculo bold-text"
+                            />
+                        </div>
+
+                        <div>
+                            <p className="bold-text"> x </p>
+                        </div>
+
+                        <div className="input-control">
+                            <label className="light-text">
+                                Gastos de tu retiro
+                                <span
+                                    className="tooltip-container"
+                                    onMouseEnter={() => setHoveredTooltip('gastos')}
+                                    onMouseLeave={() => setHoveredTooltip(null)}
+                                >
+                                    <FontAwesomeIcon icon={faExclamationCircle} className="icono-i" />
+                                    {hoveredTooltip === 'gastos' && (
+                                        <Tooltip text="Que monto te gustaría recibir mensualmente que cumpla con tus necesidades de vida." />
+                                    )}
+                                </span>
+                            </label>
+                            <input
+                                type="text"
+                                value={dato4 === 0 ? '' : dato4.toLocaleString('es-MX')}
+                                onChange={(e) => {
+                                    let value = e.target.value.replace(/,/g, '');
+                                    if (/^\d*$/.test(value)) {
+                                        setDato4(value === '' ? 0 : parseInt(value, 10));
+                                    }
+                                }}
+                                className="input-calculo bold-text"
+                                maxLength={13}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    {/* Botón de cálculo */}
+                    <div className="calculadora-igual">
+                        <button className="btn-calcular bold-text" onClick={calcularIngreso}>
+                            CALCULAR
+                        </button>
+                    </div>
+
+                    <div className="contenido-oculto-section-4">
+                        {/* Resultado final: dato5 (se muestra solo si se ha calculado) */}
+                        {ingresoRequerido !== null && (
+                            <div className="calculadora-3">
+                                <label className="light-text" htmlFor="ingreso-requerido">
+                                    Ingreso requerido
+                                </label>
+                                <p id="ingreso-requerido" className="bold-text-2">
+                                    {ingresoRequerido.toLocaleString('es-MX')} MXN
+                                </p>
+                            </div>
+                        )}
+
+                        {mostrarCotizar && (
+                            <div className="boton-cotizar-section-4">
+                                <button className="btn-cotizar bold-text" onClick={scrollToTop}>
+                                    COTIZAR
+                                </button>
+                            </div>
+                        )}
+
+                        {mostrarTexto && (
+                            <div className="texto-oculto-section-4">
+                                <p className="light-text">Recuerda que estos datos son ficticios, para tener un análisis real, por favor cotizar.</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </section>

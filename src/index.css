@@ -204,6 +204,7 @@ body {
     align-items: center;
     justify-content: end;
     margin-top: 47px;
+    z-index: -1;
 }
 
 .img-1-section-1 {
@@ -497,31 +498,27 @@ body {
 
 .calculadora-1 p,
 .calculadora-2 p {
-    padding: 0 20px;
     margin-top: 20px;
 }
 
 .input-calculo {
-    width: 120px;
+    -webkit-appearance: none; /* Quita el estilo por defecto de Safari */
+    -moz-appearance: none; /* Para Firefox */
+    appearance: none; /* Quita el estilo nativo en otros navegadores */
+    width: 140px;
     border-radius: 10px;
-    padding: 10px 7px;
+    padding: 10px 5px;
     border: none;
     text-align: center;
     background-color: var(--secondary-color);
     box-shadow: 0 10px 10px var(--shadow-color);
-    appearance: textfield;
+    font-size: 16px;
 }
 
 .input-calculo:focus {
     outline: none;
     background-color: var(--primary-color);
     color: var(--text-color);
-}
-
-.input-calculo::-webkit-outer-spin-button,
-.input-calculo::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
 
 .contenido-oculto-section-4 {
@@ -537,7 +534,7 @@ body {
     text-align: center;
     cursor: pointer;
     border-color: var(--secondary-color);
-    padding: 6px 20px;
+    padding: 6px 40px;
     line-height: 1.5;
     border-radius: 16px;
     color: #ffffff;
@@ -597,6 +594,10 @@ body {
 .tooltip-container:hover .tooltip {
     opacity: 1;
     visibility: visible;
+}
+
+.icono-i {
+    font-size: 16px;
 }
 
 /* --------------------------------- SECTION 5 LANDING*/
@@ -710,11 +711,15 @@ body {
 }
 
 .form-control {
+    -webkit-appearance: none; /* Quita el estilo por defecto de Safari */
+    -moz-appearance: none; /* Para Firefox */
+    appearance: none; /* Quita el estilo nativo en otros navegadores */
     border-radius: 16px;
-    padding: 10px 0px;
+    padding: 5px 0px;
     margin-bottom: 15px;
     background-color: white;
     border: none;
+    font-size: 16px;
 }
 
 .form-control:focus {
@@ -739,7 +744,7 @@ body {
     text-align: center;
     cursor: pointer;
     border-color: #ffffff;
-    padding: 6px 13px;
+    padding: 8px 40px;
     line-height: 1.5;
     border-radius: 16px;
     color: #ffffff;
@@ -1053,8 +1058,43 @@ body {
         text-align: center;
     }
 
-    .calculadora-3 label {
+    .calculadora-3 label,
+    .calculadora-3 p {
         font-size: 18px;
+    }
+
+    .btn-calcular,
+    .btn-cotizar {
+        padding: 8px 80px;
+    }
+
+    .calculadora-3 {
+        width: 560px;
+        margin-top: 16px;
+    }
+
+    .boton-cotizar-section-4 {
+        margin-top: 120px;
+    }
+
+    .texto-oculto-section-4 {
+        margin-top: 210px;
+    }
+
+    .texto-oculto-section-4 p {
+        font-size: 12px;
+    }
+
+    .tooltip {
+        bottom: 120%;
+        right: 70px;
+        padding: 5px;
+        width: 180px;
+        font-size: 13px;
+    }
+
+    .icono-i {
+        font-size: 16px;
     }
 
     /* --------------------------------- SECTION 5 LANDING*/
@@ -1231,7 +1271,7 @@ body {
         justify-content: center;
         padding-left: 100px;
         padding-right: 90px;
-        margin-top: 40px;
+        margin-top: 52px;
     }
 
     .img-1-section-1 {
@@ -1387,6 +1427,10 @@ body {
 
     /* --------------------------------- SECTION 4 LANDING*/
 
+    .section-4-container {
+        padding-bottom: 150px;
+    }
+
     .section-4-1 {
         text-align: center;
         width: 750px;
@@ -1421,7 +1465,7 @@ body {
     }
 
     .calculadora-igual {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .calculadora-1 p,
@@ -1438,8 +1482,40 @@ body {
         text-align: center;
     }
 
-    .calculadora-3 label {
+    .calculadora-3 label,
+    .calculadora-3 p {
         font-size: 22px;
+    }
+
+    .btn-calcular,
+    .btn-cotizar {
+        padding: 5px 150px;
+        font-size: 16px;
+    }
+
+    .calculadora-3 {
+        width: 750px;
+        margin-top: 50px;
+    }
+
+    .boton-cotizar-section-4 {
+        margin-top: 180px;
+    }
+
+    .texto-oculto-section-4 {
+        margin-top: 300px;
+    }
+
+    .texto-oculto-section-4 p {
+        font-size: 16px;
+    }
+
+    .tooltip {
+        bottom: 120%;
+        right: 70px;
+        padding: 5px;
+        width: 250px;
+        font-size: 14px;
     }
 
     /* --------------------------------- SECTION 5 LANDING*/
@@ -1609,7 +1685,7 @@ body {
     }
 
     .section-1-img {
-        margin-top: 19px;
+        margin-top: 30px;
         padding-left: 90px;
         padding-right: 150px;
     }
@@ -1929,7 +2005,7 @@ body {
     .section-1-img {
         padding-left: 150px;
         padding-right: 200px;
-        margin-top: 20px;
+        margin-top: 25px;
     }
 
     .img-1-section-1 {
@@ -2069,10 +2145,16 @@ body {
 
     .section-4-2 {
         display: flex;
+        flex-direction: column;
         width: 1150px;
         padding: 30px 0;
         padding-bottom: 50px;
-        margin-left: 40px;
+    }
+
+    .section-4-2-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .input-control {
@@ -2084,7 +2166,7 @@ body {
 
     .calculadora-igual {
         padding: 20px;
-        margin-top: 10px;
+        margin-top: -15px;
         padding-bottom: 0;
     }
 
@@ -2116,12 +2198,40 @@ body {
         text-align: center;
     }
 
-    .calculadora-3 label {
+    .calculadora-3 label,
+    .calculadora-3 p {
+        font-size: 22px;
+    }
+
+    .btn-calcular,
+    .btn-cotizar {
+        padding: 2px 200px;
+        font-size: 20px;
+    }
+
+    .calculadora-3 {
+        width: 1110px;
+        margin-top: 80px;
+    }
+
+    .boton-cotizar-section-4 {
+        margin-top: 220px;
+    }
+
+    .texto-oculto-section-4 {
+        margin-top: 350px;
+    }
+
+    .texto-oculto-section-4 p {
         font-size: 16px;
     }
 
-    .calculadora-3 p {
-        margin-top: 10px;
+    .tooltip {
+        bottom: 120%;
+        right: 70px;
+        padding: 5px;
+        width: 300px;
+        font-size: 16px;
     }
 
     /* --------------------------------- SECTION 5 LANDING*/
@@ -2456,21 +2566,50 @@ body {
         margin-top: 20px;
     }
 
+    .calculadora-3 {
+        width: 1110px;
+        margin-top: 100px;
+        margin-bottom: 0px;
+    }
+
     .input-calculo {
         width: 200px;
         height: 40px;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        text-align: center;
     }
 
-    .calculadora-3 label {
-        font-size: 18px;
-    }
-
-    .calculadora-3 {
-        margin-bottom: 35px;
-    }
-
+    .calculadora-3 label,
     .calculadora-3 p {
-        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    .btn-calcular,
+    .btn-cotizar {
+        padding: 2px 250px;
+        font-size: 22px;
+    }
+
+    .boton-cotizar-section-4 {
+        margin-top: 250px;
+    }
+
+    .texto-oculto-section-4 {
+        margin-top: 380px;
+    }
+
+    .texto-oculto-section-4 p {
+        font-size: 16px;
+    }
+
+    .tooltip {
+        bottom: 120%;
+        right: 70px;
+        padding: 5px;
+        width: 300px;
+        font-size: 16px;
     }
 
     /* --------------------------------- SECTION 5 LANDING*/
@@ -2767,6 +2906,10 @@ body {
         padding-bottom: 80px;
     }
 
+    .section-4-2-1 {
+        padding-bottom: 20px;
+    }
+
     .calculadora-igual {
         padding: 0 20px;
     }
@@ -2786,21 +2929,54 @@ body {
         margin-top: 20px;
     }
 
+    .calculadora-3 {
+        width: 1110px;
+        margin-top: 100px;
+        margin-bottom: 0px;
+    }
+
     .input-calculo {
         width: 250px;
         height: 60px;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        text-align: center;
     }
 
-    .calculadora-3 label {
-        font-size: 20px;
-    }
-
-    .calculadora-3 {
-        margin-bottom: 42px;
-    }
-
+    .calculadora-3 label,
     .calculadora-3 p {
-        margin-top: 25px;
+        font-size: 26px;
+    }
+
+    .btn-calcular,
+    .btn-cotizar {
+        padding: 4px 300px;
+        font-size: 24px;
+    }
+
+    .boton-cotizar-section-4 {
+        margin-top: 250px;
+    }
+
+    .texto-oculto-section-4 {
+        margin-top: 380px;
+    }
+
+    .texto-oculto-section-4 p {
+        font-size: 16px;
+    }
+
+    .tooltip {
+        bottom: 120%;
+        right: 70px;
+        padding: 5px;
+        width: 300px;
+        font-size: 16px;
+    }
+
+    .icono-i {
+        font-size: 20px;
     }
 
     /* --------------------------------- SECTION 5 LANDING*/
