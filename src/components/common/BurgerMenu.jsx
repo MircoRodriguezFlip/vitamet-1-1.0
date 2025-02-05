@@ -33,7 +33,7 @@ export const BurgerMenu = () => {
             const targetElement = document.querySelector(link.to);
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Ajuste para compensar el navbar
+                    top: targetElement.offsetTop - 45, // Ajuste para compensar el navbar
                     behavior: 'smooth',
                 });
             }

@@ -441,6 +441,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-bottom: 100px;
 }
 
 .section-4-container h2,
@@ -467,6 +468,7 @@ body {
 }
 
 .section-4-2 {
+    position: relative;
     text-align: center;
     width: 360px;
     padding: 30px 0;
@@ -502,12 +504,18 @@ body {
 .input-calculo {
     width: 120px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px 7px;
     border: none;
     text-align: center;
     background-color: var(--secondary-color);
     box-shadow: 0 10px 10px var(--shadow-color);
     appearance: textfield;
+}
+
+.input-calculo:focus {
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .input-calculo::-webkit-outer-spin-button,
@@ -516,8 +524,49 @@ body {
     margin: 0;
 }
 
+.contenido-oculto-section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-calcular,
+.btn-cotizar {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-color: var(--secondary-color);
+    padding: 6px 20px;
+    line-height: 1.5;
+    border-radius: 16px;
+    color: #ffffff;
+    background: none;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.calculadora-3 {
+    position: absolute;
+    width: 340px;
+    margin-top: 15px;
+}
+
 .calculadora-3 label {
     font-size: 16px;
+}
+
+.boton-cotizar-section-4 {
+    position: absolute;
+    margin-top: 110px;
+}
+
+.texto-oculto-section-4 {
+    position: absolute;
+    margin-top: 200px;
+}
+
+.texto-oculto-section-4 p {
+    font-size: 12px;
 }
 
 .tooltip-container {
@@ -662,10 +711,15 @@ body {
 
 .form-control {
     border-radius: 16px;
-    padding: 5px 0;
+    padding: 10px 0px;
     margin-bottom: 15px;
     background-color: white;
     border: none;
+}
+
+.form-control:focus {
+    outline: none;
+    background-color: var(--secondary-color);
 }
 
 .text-danger {
