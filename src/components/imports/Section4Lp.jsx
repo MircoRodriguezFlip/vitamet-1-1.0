@@ -17,13 +17,20 @@ export const Section4LP = () => {
     const [ingresoRequerido, setIngresoRequerido] = useState(null);
     const [mostrarCotizar, setMostrarCotizar] = useState(false);
     const [mostrarTexto, setMostrarTexto] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const calcularIngreso = () => {
+        if (dato1 === 0 || dato2 === 0 || dato4 === 0) {
+            setErrorMessage('Por favor, rellena todos los datos');
+            return;
+        }
+
         const dato3 = dato1 - dato2;
         const dato5 = dato3 * 12 * dato4;
         setIngresoRequerido(dato5);
         setMostrarCotizar(true);
         setMostrarTexto(true);
+        setErrorMessage('');
     };
 
     return (
@@ -165,6 +172,9 @@ export const Section4LP = () => {
                             CALCULAR
                         </button>
                     </div>
+
+                    {/* Mensaje de error */}
+                    {errorMessage && <p className="error-message bold-text">{errorMessage}</p>}
 
                     <div className="contenido-oculto-section-4">
                         {/* Resultado final: dato5 (se muestra solo si se ha calculado) */}
