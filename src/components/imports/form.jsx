@@ -15,9 +15,19 @@ export const Form = () => {
             if (success) {
                 Swal.fire({
                     title: 'Excelente',
-                    text: 'Datos enviados correctamente',
+                    html: '<div class="light-text"><p>Datos enviados correctamente</p><p>Un agente se pondrá en contacto contigo</p></div>',
                     icon: 'success',
                     confirmButtonColor: '#9fc750',
+                    scrollbarPadding: false,
+                    customClass: {
+                        title: 'bold-text',
+                    },
+                    willOpen: () => {
+                        document.body.style.overflow = 'auto';
+                    },
+                    willClose: () => {
+                        document.body.style.overflow = 'auto';
+                    },
                 });
             } else {
                 Swal.fire({
@@ -25,6 +35,17 @@ export const Form = () => {
                     text: 'Hubo un error al enviar los datos',
                     icon: 'error',
                     confirmButtonColor: '#1497ee',
+                    scrollbarPadding: false,
+                    customClass: {
+                        title: 'bold-text',
+                        text: 'light-text',
+                    },
+                    willOpen: () => {
+                        document.body.style.overflow = 'auto';
+                    },
+                    willClose: () => {
+                        document.body.style.overflow = 'auto';
+                    },
                 });
             }
         }

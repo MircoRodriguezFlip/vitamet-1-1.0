@@ -120,6 +120,7 @@ export const useForm = (initialState, submitCallback) => {
 
             if (response.ok) {
                 submitCallback(true, data);
+                resetForm();
             } else {
                 submitCallback(false, data);
             }
@@ -130,6 +131,10 @@ export const useForm = (initialState, submitCallback) => {
         }
     };
 
+    const resetForm = () => {
+        setFormData(initialState);
+    };
+
     return {
         formData,
         errors,
@@ -137,5 +142,6 @@ export const useForm = (initialState, submitCallback) => {
         handleChange,
         handleSubmit,
         estados,
+        resetForm,
     };
 };

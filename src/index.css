@@ -203,7 +203,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-top: 47px;
+    margin-top: 60px;
     z-index: -1;
 }
 
@@ -245,6 +245,7 @@ body {
 /* --------------------------------- SECTION 2 LANDING*/
 
 .section-2-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,6 +256,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: -2;
 }
 
 .section-2-1 {
@@ -286,12 +288,12 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 10px;
+    z-index: -1;
 }
 
 .section-2-2 img {
-    position: relative;
     width: 250px;
-    margin-bottom: -14px;
+    margin-bottom: -20px;
     margin-right: 20px;
 }
 
@@ -688,6 +690,32 @@ body {
     display: none;
 }
 
+/* -------------------------------------------------------------------------- ERROR PAGE */
+
+.section-1-error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.section-1-error-page h1,
+.section-1-error-page h2 {
+    margin: 0;
+}
+
+.section-1-error-page h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-1-error-page h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 /* -------------------------------------------------------------------------- FORM */
 
 .form {
@@ -878,7 +906,7 @@ body {
     }
 
     .section-1-img {
-        margin-top: 72px;
+        margin-top: 80px;
         margin-right: 10px;
     }
 
@@ -914,7 +942,6 @@ body {
 
     .section-2-2 img {
         width: 300px;
-        margin-bottom: -18px;
     }
 
     .sueldos-container {
@@ -1271,7 +1298,7 @@ body {
         justify-content: center;
         padding-left: 100px;
         padding-right: 90px;
-        margin-top: 52px;
+        margin-top: 60px;
     }
 
     .img-1-section-1 {
@@ -1313,7 +1340,7 @@ body {
 
     .section-2-2 img {
         width: 300px;
-        margin-bottom: -46px;
+        margin-bottom: -50px;
     }
 
     .sueldos-container {
@@ -1685,9 +1712,10 @@ body {
     }
 
     .section-1-img {
-        margin-top: 30px;
+        margin-top: 40px;
         padding-left: 90px;
         padding-right: 150px;
+        z-index: -2;
     }
 
     .img-1-section-1 {
@@ -1733,7 +1761,7 @@ body {
 
     .section-2-2 img {
         width: 300px;
-        margin-bottom: -4px;
+        margin-bottom: -10px;
     }
 
     .sueldos-container {
@@ -2005,7 +2033,6 @@ body {
     .section-1-img {
         padding-left: 150px;
         padding-right: 200px;
-        margin-top: 25px;
     }
 
     .img-1-section-1 {
@@ -2046,7 +2073,7 @@ body {
 
     .section-2-2 img {
         width: 400px;
-        margin-bottom: 17px;
+        margin-bottom: 10px;
         padding-right: 30px;
     }
 
