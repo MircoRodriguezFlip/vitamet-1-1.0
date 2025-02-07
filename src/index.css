@@ -183,6 +183,7 @@ body {
 .section-1-titulo h2,
 .section-1-icono h3 {
     margin: 0;
+    user-select: none;
 }
 
 .section-1-titulo h1 {
@@ -236,6 +237,8 @@ body {
 
 .section-1-icono img {
     width: 60px;
+    user-select: none;
+    pointer-events: none;
 }
 
 .section-1-icono h3 {
@@ -271,6 +274,7 @@ body {
 .section-2-1 h2,
 .section-2-1 p {
     margin: 0;
+    user-select: none;
 }
 
 .section-2-1 h2 {
@@ -289,6 +293,7 @@ body {
     justify-content: center;
     padding-top: 10px;
     z-index: -1;
+    user-select: none;
 }
 
 .section-2-2 img {
@@ -342,6 +347,7 @@ body {
 .section-3-container h3 {
     margin: 0;
     color: var(--text-color);
+    user-select: none;
 }
 
 .section-3-1 {
@@ -361,6 +367,8 @@ body {
     align-items: flex-start;
     position: relative;
     gap: 20px;
+    user-select: none;
+    pointer-events: none;
 }
 
 .burbuja-section-3 {
@@ -452,6 +460,7 @@ body {
 .section-4-container p {
     margin: 0;
     color: var(--text-color);
+    user-select: none;
 }
 
 .section-4-1 {
@@ -480,6 +489,7 @@ body {
 
 .section-4-2 label {
     font-size: 13px;
+    user-select: none;
 }
 
 .calculadora-2 {
@@ -618,6 +628,7 @@ body {
 .section-5-container h2,
 .section-5-container p {
     margin: 0;
+    user-select: none;
 }
 
 .section-5-1 {
@@ -648,6 +659,8 @@ body {
     position: relative;
     width: 100px;
     margin-bottom: -30px;
+    user-select: none;
+    pointer-events: none;
 }
 
 .container-texto-section-5 {
@@ -711,6 +724,7 @@ body {
 .section-1-error-page h1,
 .section-1-error-page h2 {
     margin: 0;
+    user-select: none;
 }
 
 .section-1-error-page h1 {
@@ -743,6 +757,10 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--text-color);
+}
+
+.campo-precalificar-form label {
+    user-select: none;
 }
 
 .form-control {
@@ -803,6 +821,7 @@ body {
 .politicas-titulos {
     text-align: center;
     padding-bottom: 10px;
+    user-select: none;
 }
 
 .politicas-titulos h1 {
@@ -830,6 +849,7 @@ body {
     padding: 5px 0;
     font-size: 15px;
     margin: 0;
+    user-select: none;
 }
 
 .politicas-texto-1 h3,
@@ -838,6 +858,7 @@ body {
 .politicas-texto-2 h4 {
     font-size: 16px;
     padding-top: 20px;
+    user-select: none;
 }
 
 .politicas-page-container a {

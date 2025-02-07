@@ -17,7 +17,7 @@ export const Section2LP = () => {
 
             <div className="section-2-2">
                 <div>
-                    <img src={fondoImgSection} alt="" />
+                    <img src={fondoImgSection} alt="Hombre joven apuntando a los datos de ahorro" loading="lazy" decoding="async" />
                 </div>
 
                 <div className="sueldos-container light-text">

@@ -18,15 +18,15 @@ export const Section1LP = () => {
                     </h2>
 
                     <div className="section-1-icono-2">
-                        <img src={iconosection1} alt="" />
+                        <img src={iconosection1} alt="Icono de dos personas conversando" />
 
                         <h3 className="bold-text-2">Asesoría Gratuita</h3>
                     </div>
                 </div>
 
                 <div className="section-1-img">
-                    <img src={fondoImgSection} className="img-2-section-1" alt="" />
-                    <img src={imgSection1} className="img-1-section-1" alt="" />
+                    <img src={fondoImgSection} className="img-2-section-1" alt="Luz que invita a llenar el formulario" />
+                    <img src={imgSection1} className="img-1-section-1" alt="Mujer joven levantando un pulgar" />
                 </div>
             </div>
 
@@ -35,7 +35,7 @@ export const Section1LP = () => {
             </div>
 
             <div className="section-1-icono">
-                <img src={iconosection1} alt="" />
+                <img src={iconosection1} alt="Icono de dos personas conversando" />
 
                 <h3 className="bold-text-2">Asesoría Gratuita</h3>
             </div>

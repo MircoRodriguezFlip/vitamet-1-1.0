@@ -6,13 +6,13 @@ import imgMoneda4 from '../../assets/images/moneda 4.webp';
 export const Section3LP = () => {
     return (
         <section className="section-3-container">
-            <div className="section-3-1">
+            <header className="section-3-1">
                 <h2 className="bold-text-2">AHORRA DESDE:</h2>
                 <p className="bold-text">
                     $2,500 al mes y deja que tu dinero trabaje por ti. Al llegar a los 65 años, podrías disfrutar de un capital que transforme tu
                     retiro en la etapa más tranquila y próspera de tu vida.
                 </p>
-            </div>
+            </header>
 
             <div className="section-3-2">
                 <div className="grupo-moneda">
@@ -21,7 +21,7 @@ export const Section3LP = () => {
                     </div>
 
                     <div className="img-moneda fondo-moneda-1">
-                        <img src={imgMoneda1} className="img-moneda-1" alt="" />
+                        <img src={imgMoneda1} className="img-moneda-1" alt="Muchas monedas apiladas" loading="lazy" decoding="async" />
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@ export const Section3LP = () => {
                     </div>
 
                     <div className="img-moneda fondo-moneda-2">
-                        <img src={imgMoneda2} className="img-moneda-2" alt="" />
+                        <img src={imgMoneda2} className="img-moneda-2" alt="Varias monedas apiladas" loading="lazy" decoding="async" />
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@ export const Section3LP = () => {
                     </div>
 
                     <div className="img-moneda fondo-moneda-3">
-                        <img src={imgMoneda3} className="img-moneda-3" alt="" />
+                        <img src={imgMoneda3} className="img-moneda-3" alt="Pocas monedas apiladas" loading="lazy" decoding="async" />
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@ export const Section3LP = () => {
                     </div>
 
                     <div className="img-moneda fondo-moneda-4">
-                        <img src={imgMoneda4} className="img-moneda-4" alt="" />
+                        <img src={imgMoneda4} className="img-moneda-4" alt="Muy pocas monedas apiladas" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>

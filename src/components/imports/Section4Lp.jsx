@@ -35,11 +35,11 @@ export const Section4LP = () => {
 
     return (
         <section className="section-4-container">
-            <div className="section-4-1">
+            <header className="section-4-1">
                 <h2 className="bold-text-2">¿Sabes cuánto necesitas ahorrar para disfrutar del retiro que deseas?</h2>
                 <h3 className="light-text">No dejes que la incertidumbre defina tu futuro.</h3>
                 <h3 className="light-text">¡Consulta hoy y descubre cuánto necesitas para alcanzar el sueldo ideal en tu retiro!</h3>
-            </div>
+            </header>
 
             <div className="section-4-2">
                 <div className="section-4-2-1">
@@ -168,7 +168,11 @@ export const Section4LP = () => {
                 <div>
                     {/* Botón de cálculo */}
                     <div className="calculadora-igual">
-                        <button className="btn-calcular bold-text" onClick={calcularIngreso}>
+                        <button
+                            className="btn-calcular bold-text"
+                            onClick={calcularIngreso}
+                            title="Haz clic para calcular tu ingreso total requerido"
+                        >
                             CALCULAR
                         </button>
                     </div>
@@ -191,7 +195,7 @@ export const Section4LP = () => {
 
                         {mostrarCotizar && (
                             <div className="boton-cotizar-section-4">
-                                <button className="btn-cotizar bold-text" onClick={scrollToTop}>
+                                <button className="btn-cotizar bold-text" onClick={scrollToTop} title="Haz clic para cotizar con un agente">
                                     COTIZAR
                                 </button>
                             </div>

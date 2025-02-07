@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const VITAMET_LINK = (
     <NavLink to="/" title="ir a www.contratarunplanprivadoderetiro.com.mx">
-        www.contratarunplanprivadoderetiro.com.mx
+        contratarunplanprivadoderetiro.com.mx
     </NavLink>
 );
 
