@@ -24,7 +24,7 @@ export const LandingPage = () => {
     }, [location]);
 
     return (
-        <main className="landing-page-container">
+        <main className="landing-page-container fade-in">
             <section>
                 <Section1LP />
             </section>

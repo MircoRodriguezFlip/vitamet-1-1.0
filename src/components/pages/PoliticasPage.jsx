@@ -8,7 +8,7 @@ const VITAMET_LINK = (
 
 export const PoliticasPage = () => {
     return (
-        <main className="politicas-page-container">
+        <main className="politicas-page-container fade-in">
             <section className="politicas-titulos light-text">
                 <h1 className="bold-text-2">AVISO DE PRIVACIDAD</h1>
                 <p>30/01/2025</p>

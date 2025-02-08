@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 export const ErrorPage = () => {
     return (
-        <main className="page-container">
+        <main className="page-container fade-in">
             <section className="section-1-error-page">
                 <h1 className="bold-text">
                     Error 404 <br /> Página no encontrada

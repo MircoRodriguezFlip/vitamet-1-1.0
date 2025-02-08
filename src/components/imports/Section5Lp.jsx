@@ -4,7 +4,11 @@ import fotoTexto3 from '../../assets/images/foto texto 3.webp';
 import imgSection5 from '../../assets/images/imagen section 5 landing.webp';
 import fondoImgSection from '../../assets/images/fondo imagenes.webp';
 
+import useIntersectionAnimation from '../../hooks/Animation';
+
 export const Section5LP = () => {
+    const imageRef = useIntersectionAnimation('slide-in');
+
     return (
         <section className="section-5-container">
             <div className="section-5-1">
@@ -36,7 +40,7 @@ export const Section5LP = () => {
                     </div>
                 </div>
 
-                <div className="imagen-section-5-1">
+                <div className="imagen-section-5-1" ref={imageRef}>
                     <img
                         src={fondoImgSection}
                         className="img-1-section-5"
@@ -54,7 +58,7 @@ export const Section5LP = () => {
                 </div>
             </div>
 
-            <div className="imagen-section-5">
+            <div className="imagen-section-5" ref={imageRef}>
                 <img
                     src={fondoImgSection}
                     className="img-1-section-5"

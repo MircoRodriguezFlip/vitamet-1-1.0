@@ -1,6 +1,10 @@
 import fondoImgSection from '../../assets/images/imagen section 2 landing.webp';
 
+import useIntersectionAnimation from '../../hooks/Animation';
+
 export const Section2LP = () => {
+    const imageRef = useIntersectionAnimation('slide-in');
+
     return (
         <section className="section-2-container">
             <div className="section-2-1">
@@ -17,7 +21,14 @@ export const Section2LP = () => {
 
             <div className="section-2-2">
                 <div>
-                    <img src={fondoImgSection} alt="Hombre joven apuntando a los datos de ahorro" loading="lazy" decoding="async" />
+                    <img
+                        ref={imageRef}
+                        src={fondoImgSection}
+                        className="imagen-section-2LP"
+                        alt="Hombre joven apuntando a los datos de ahorro"
+                        loading="lazy"
+                        decoding="async"
+                    />
                 </div>
 
                 <div className="sueldos-container light-text">
